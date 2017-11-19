@@ -214,7 +214,7 @@ class CA:
                     break
             if not rule: # stupid
                 rule = 'B3/S23'
-        await ctx.invoke(self.sim, gen=int(gen), rule=rule, step=step, randpat=makesoup(rule, int(x), int(y)), soup_dims='×'.join(str(i) for i in (x,y)))
+        await ctx.invoke(self.sim, gen=int(gen), rule=rule, step=step, randpat=self.makesoup(rule, int(x), int(y)), soup_dims='×'.join(str(i) for i in (x,y)))
     
     @sim.error
     async def sim_error(self, ctx, error):
